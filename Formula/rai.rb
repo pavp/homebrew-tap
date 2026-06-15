@@ -5,41 +5,45 @@
 class Rai < Formula
   desc "React Architecture Intelligence launcher"
   homepage "https://github.com/pavp/react-architecture-intelligence"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pavp/react-architecture-intelligence/releases/download/v0.2.0/rai_0.2.0_darwin_amd64.tar.gz"
-      sha256 "68d7e9f3c3fb81978fa3bc9fa256499f1699204f857184324b369d058eef685d"
+      url "https://github.com/pavp/react-architecture-intelligence/releases/download/v0.2.1/rai_0.2.1_darwin_amd64.tar.gz"
+      sha256 "280bee7f49861d006653f8fa9b987d5f80e57658c2a484ad845d5431c345047f"
 
       define_method(:install) do
-        bin.install "rai"
+        libexec.install Dir["*"]
+        bin.install_symlink libexec/"rai"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pavp/react-architecture-intelligence/releases/download/v0.2.0/rai_0.2.0_darwin_arm64.tar.gz"
-      sha256 "187035e1f2c84a557856343561a6df4795b316b9f5f9afaa3a282f11e9d8ca5c"
+      url "https://github.com/pavp/react-architecture-intelligence/releases/download/v0.2.1/rai_0.2.1_darwin_arm64.tar.gz"
+      sha256 "5a3124849fe96a876d477fda78455a188aac9acd8476861ec82912fae8662294"
 
       define_method(:install) do
-        bin.install "rai"
+        libexec.install Dir["*"]
+        bin.install_symlink libexec/"rai"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pavp/react-architecture-intelligence/releases/download/v0.2.0/rai_0.2.0_linux_amd64.tar.gz"
-      sha256 "11419c953ed972967e8f79b9ab37fc74a8a46c66b86bc2313bfa19d98edf25f0"
+      url "https://github.com/pavp/react-architecture-intelligence/releases/download/v0.2.1/rai_0.2.1_linux_amd64.tar.gz"
+      sha256 "fa7390ecaa9570e02e6b77816a7ca9243600e899fb1c3b9687e3b381491499cf"
       define_method(:install) do
-        bin.install "rai"
+        libexec.install Dir["*"]
+        bin.install_symlink libexec/"rai"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pavp/react-architecture-intelligence/releases/download/v0.2.0/rai_0.2.0_linux_arm64.tar.gz"
-      sha256 "bee4398a2c85a6bc63d74242e162430c72119e40ff3b3b9cab8f0dc51c779eee"
+      url "https://github.com/pavp/react-architecture-intelligence/releases/download/v0.2.1/rai_0.2.1_linux_arm64.tar.gz"
+      sha256 "ec0eb68bc88be2f3f630cef993f482858a75f81e8b9f9d81c9f526a22bf5c2a1"
       define_method(:install) do
-        bin.install "rai"
+        libexec.install Dir["*"]
+        bin.install_symlink libexec/"rai"
       end
     end
   end
