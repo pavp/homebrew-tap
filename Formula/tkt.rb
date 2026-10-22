@@ -5,21 +5,21 @@
 class Tkt < Formula
   desc "Sprint tickets across Jira spaces with GitHub PRs and CI, for agent-driven development"
   homepage "https://github.com/pavp/tkt"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pavp/tkt/releases/download/v0.3.0/tkt_0.3.0_darwin_amd64.tar.gz"
-      sha256 "9649626dfec7f777b785ffc568b59480f02692788d3c187dd9de4090c76c4855"
+      url "https://github.com/pavp/tkt/releases/download/v0.4.0/tkt_0.4.0_darwin_amd64.tar.gz"
+      sha256 "a18032f38d80be4c5493b1fe6706416121c4a97736508e9cde01af5239ea6a91"
 
       define_method(:install) do
         bin.install "tkt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pavp/tkt/releases/download/v0.3.0/tkt_0.3.0_darwin_arm64.tar.gz"
-      sha256 "5b46f1ab2cd61a53e6f21229b208301302301d038fc449010846a3ebeef1f810"
+      url "https://github.com/pavp/tkt/releases/download/v0.4.0/tkt_0.4.0_darwin_arm64.tar.gz"
+      sha256 "b52902d5a26d53cea9905f70c0ae5c542161ba6fd751b59cdad4196d51ab6fa8"
 
       define_method(:install) do
         bin.install "tkt"
@@ -29,15 +29,15 @@ class Tkt < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pavp/tkt/releases/download/v0.3.0/tkt_0.3.0_linux_amd64.tar.gz"
-      sha256 "d748d2849c43058fa8c517c3f7799c7133199e0f716f3acf204fe42381701694"
+      url "https://github.com/pavp/tkt/releases/download/v0.4.0/tkt_0.4.0_linux_amd64.tar.gz"
+      sha256 "45fce5a46c9efd621de9ab67269b3510c0be44fd380a5d9f2281d15448ae941a"
       define_method(:install) do
         bin.install "tkt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pavp/tkt/releases/download/v0.3.0/tkt_0.3.0_linux_arm64.tar.gz"
-      sha256 "4394bad6c69dd674cd9f2e340fa8035dc6bd433fd43595ec70e16042cf2b5f00"
+      url "https://github.com/pavp/tkt/releases/download/v0.4.0/tkt_0.4.0_linux_arm64.tar.gz"
+      sha256 "81b422fd872935197ceb4c65b350672e6c6f621356e6393f5b99965b641c2765"
       define_method(:install) do
         bin.install "tkt"
       end
