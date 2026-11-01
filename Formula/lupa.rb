@@ -5,21 +5,21 @@
 class Lupa < Formula
   desc "Verified code review, locally, with the coding agent you already use"
   homepage "https://github.com/pavp/lupa"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pavp/lupa/releases/download/v0.1.1/lupa_0.1.1_darwin_amd64.tar.gz"
-      sha256 "8b8bf4c57e75bf4a5178aeb12eee8357a0b88c929684674904f03ab0cdb642ab"
+      url "https://github.com/pavp/lupa/releases/download/v0.1.2/lupa_0.1.2_darwin_amd64.tar.gz"
+      sha256 "cdfc579494ded5e818b27374a8c1e7270f8c2ba7d52946385deda403727a04e8"
 
       define_method(:install) do
         bin.install "lupa"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pavp/lupa/releases/download/v0.1.1/lupa_0.1.1_darwin_arm64.tar.gz"
-      sha256 "47336ebbaa50c3c81a4167c8a90e74b9e2dc62a8be0c21f38c6727ea8088a844"
+      url "https://github.com/pavp/lupa/releases/download/v0.1.2/lupa_0.1.2_darwin_arm64.tar.gz"
+      sha256 "48b82e2d3f84020e95d70468c65879c738c4cc50ec75161b073e23d2472ae531"
 
       define_method(:install) do
         bin.install "lupa"
@@ -29,15 +29,15 @@ class Lupa < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pavp/lupa/releases/download/v0.1.1/lupa_0.1.1_linux_amd64.tar.gz"
-      sha256 "473b1fca6cb31865360a49d52df321fdc93e00da098e002ae56caa1df6054047"
+      url "https://github.com/pavp/lupa/releases/download/v0.1.2/lupa_0.1.2_linux_amd64.tar.gz"
+      sha256 "85fee3369f53e7c8aba20da2984c4b92a7b7aa6509523dd6d17501ddd83128ed"
       define_method(:install) do
         bin.install "lupa"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pavp/lupa/releases/download/v0.1.1/lupa_0.1.1_linux_arm64.tar.gz"
-      sha256 "336d4dada0465bea7b651700c4e3347696c49434f51cd20b6d7bb035915c8b17"
+      url "https://github.com/pavp/lupa/releases/download/v0.1.2/lupa_0.1.2_linux_arm64.tar.gz"
+      sha256 "618159436cb2a7cc18fbaa81ef7c3c9b7638e1570ace77c5f8d8d789f620986c"
       define_method(:install) do
         bin.install "lupa"
       end
